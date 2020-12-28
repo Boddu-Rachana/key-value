@@ -1,9 +1,7 @@
 # key-value
 A file-based key-value-data store that supports the basic CRD operations
-This is a file which can be exposed as a library that supports the basic CRD(create, read, write) operations. Data store is meant to local storage for one single process on single laptop
-
+This is a file that can be exposed as a library that supports the basic CRD(create, read, write) operations. Data store is meant to local storage for one single process on single laptop
 The data store will support the following :
-
 It can be initialized using an optional file path. If one is not provided, it will reliably create itself in a reasonable location on the laptop.
 A new key-value pair can be added to the data store using the Create operation. The key is always a string - capped at 32chars. The value is always a JSON object - capped at 16KB.
 If Create is invoked for an existing key, an appropriate error must be returned.
@@ -13,5 +11,5 @@ Every key supports setting a Time-To-Live property when it is created. This prop
 Appropriate error responses must always be returned to a client if it uses the data store in unexpected ways or breaches any limits
 The file size never exceeds 1GB
 The file is accessed by multi-threading
-Go through the accessing.py file and examples.pdf file that are attached here with in order to understand clearly how the code works and how to perform operations in this.
+Go through the access.py file  in order to understand clearly how the code works and how to perform operations in this.
 
